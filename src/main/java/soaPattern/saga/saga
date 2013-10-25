@@ -1,0 +1,20 @@
+References
+1. http://msdn.microsoft.com/en-us/library/jj591569.aspx
+2. http://www.rgoarchitects.com/Files/SOAPatterns/Saga.pdf
+3. http://arnon.me/2013/01/saga-pattern-architecture-design/
+
+
+
+The Saga pattern is sometimes referred to as “Long Lived Transaction”. It is true that you can
+conceptually think of a Saga as a single logical unit of work and that it does make use of transaction
+semantics. Breaking long running business process to smaller actions or activities and compensations.(compensation may not
+be able to undo the original activity – but it does have to try to minimize the effects of the activity)
+In other words, I see sagas as the notion of getting distributed agreement of a process with reduced guarantees
+ (vs. distributed transactions that propose ACID guarantees across systems)
+
+The Saga pattern is an architectural pattern that focused on the integrity reliability quality attributes and
+it pertains to the communication patterns between services. When it comes to design the implementation of the pattern.
+you need to decide how to implement the concerns and roles defined in the pattern
+-e.g. controlling the flow and the status of the saga. One decision can be to implement it centrally and
+use orchestration another decision can be to decentralize it and use context…
+

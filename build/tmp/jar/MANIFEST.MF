@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Design-Pattern: Design pattern example
+Implementation-Version: 1.0
+
